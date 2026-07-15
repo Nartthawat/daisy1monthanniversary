@@ -1,0 +1,567 @@
+<!doctype html>
+<html lang="th">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>หน้าแรก - Daisy</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="main-page-body">
+    
+    
+    <nav class="netflix-navbar">
+      <div class="nav-left">
+        <img src="img/netflixlogo.png" alt="Logo" class="nav-logo-img">
+        <ul class="nav-links">
+          <li class="active"><a href="#">หน้าหลัก</a></li>
+          <li><a href="#">รายการทีวี</a></li>
+          <li><a href="#">ภาพยนตร์</a></li>
+          <li><a href="#">เกม</a></li>
+          <li><a href="#">มาใหม่และกำลังฮิต</a></li>
+          <li><a href="#">รายการของฉัน</a></li>
+          <li><a href="#">เลือกดูตามภาษา</a></li>
+        </ul>
+      </div>
+      <div class="nav-right">
+        <span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></span>
+        <span class="nav-kids">มุมเด</span>
+        <span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg></span>
+        <div class="nav-profile" id="profileMenuTrigger" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false">
+          <img src="img/daisypfp.jpg" alt="Profile" class="avatar-small" id="navProfileAvatar">
+          <span class="profile-name" id="navProfileName">Daisy</span>
+          <span class="caret">▼</span>
+          <div class="profile-menu" id="profileMenu" role="menu">
+            <button type="button" class="profile-menu-item" id="moveProfileBtn">ย้ายโปรไฟล์</button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    
+    <div class="hero-section">
+      <div class="video-background">
+        
+        <div class="static-bg" id="heroStaticBg" style="background-image: url('vid/previewdaisy.png');"></div>
+
+        
+        <video muted playsinline id="heroVideo" class="hidden-video">
+          <source src="vid/highlightdaisy.mp4" type="video/mp4">
+        </video>
+        
+        
+        <div class="video-vignette"></div> 
+      </div>
+
+      <div class="hero-content">
+        
+        <div class="animated-logo" id="heroLogo">
+          <div class="logo-details">N A R T  &nbsp;O R I G I N A L</div>
+          <h1 class="logo-text">ธัญยฉัตร</h1>
+        </div>
+        
+        
+        <p class="hero-description" id="heroDesc">
+          หนึ่งเดือนอาจเป็นเวลาไม่นานสำหรับใครหลายคน<br>แต่สำหรับเค้า มันเต็มไปด้วยรอยยิ้ม ความสุข และช่วงเวลาที่มีเธออยู่เคียงข้าง
+        </p>
+
+        
+        <div class="hero-buttons">
+          <button class="btn play-btn">
+            <svg viewBox="0 0 24 24" fill="currentColor" class="btn-icon"><path d="M8 5v14l11-7z"/></svg> 
+            เล่น
+          </button>
+          <button class="btn info-btn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="btn-icon">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="12" y1="16" x2="12" y2="12"></line>
+              <line x1="12" y1="8" x2="12.01" y2="8"></line>
+            </svg> 
+            ข้อมูลเพิ่มเติม
+          </button>
+        </div>
+      </div>
+
+      
+      <div class="age-rating">1 เดือน</div>
+    </div>
+
+    
+    
+    </div>
+
+    
+    <div class="main-content">
+      
+      
+      <div class="content-row">
+        <h2 class="row-title">รายการของฉัน</h2>
+        <div class="row-posters">
+          
+          <div class="poster"><img src="img/poster1.jpg" alt=""></div>
+          <div class="poster"><img src="img/poster2.jpg" alt=""></div>
+          <div class="poster"><img src="img/poster3.jpg" alt=""></div>
+          <div class="poster"><img src="img/poster4.jpg" alt=""></div>
+          <div class="poster"><img src="img/poster5.jpg" alt=""></div>
+          <div class="poster"><img src="img/poster6.jpg" alt=""></div>
+        </div>
+      </div>
+
+      
+      <div class="content-row">
+        <h2 class="row-title">ดูต่อสำหรับ คุณ</h2>
+        <div class="row-posters">
+          <div class="poster"><img src="img/poster7.jpg" alt=""></div>
+          <div class="poster"><img src="img/poster8.jpg" alt=""></div>
+          <div class="poster"><img src="img/poster9.jpg" alt=""></div>
+          <div class="poster"><img src="img/poster10.jpg" alt=""></div>
+          <div class="poster"><img src="img/poster11.jpg" alt=""></div>
+          <div class="poster"><img src="img/poster12.jpg" alt=""></div>
+        </div>
+      </div>
+
+      
+      <div class="content-row">
+        <h2 class="row-title">ภาพยนตร์และซีรีส์พากย์ไทย</h2>
+        <div class="row-posters">
+          <div class="poster"><img src="img/poster13.jpg" alt=""></div>
+          <div class="poster"><img src="img/poster14.jpg" alt=""></div>
+          <div class="poster"><img src="img/poster15.jpg" alt=""></div>
+          <div class="poster"><img src="img/poster16.jpg" alt=""></div>
+          <div class="poster"><img src="img/poster17.jpg" alt=""></div>
+          <div class="poster"><img src="img/poster18.jpg" alt=""></div>
+        </div>
+      </div>
+
+    </div>
+
+    
+    <div id="loadingScreen" class="loading-screen">
+      <div class="netflix-spinner"></div>
+    </div>
+
+    
+    <div id="fullScreenPlayer" class="fullscreen-player">
+      
+      <video id="mainMovie">
+        <source src="vid/fulldaisy.mp4" type="video/mp4">
+      </video>
+
+      
+      <div class="player-ui" id="playerUi">
+        
+        
+        <div class="player-top-bar">
+          <button id="backToHomeBtn" class="control-btn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+          </button>
+        </div>
+
+        
+        <div class="player-bottom-bar">
+          
+          
+          <div class="progress-container" id="progressContainer">
+            <div class="progress-bar-bg"></div>
+            <div class="progress-bar-fill" id="progressBar"></div>
+            <div class="progress-dot" id="progressDot"></div>
+          </div>
+
+          
+          <div class="controls-row">
+            
+            <div class="controls-left">
+              
+              <button id="playPauseBtn" class="control-btn">
+                <svg id="playIcon" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                <svg id="pauseIcon" viewBox="0 0 24 24" fill="currentColor" style="display: none;"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+              </button>
+              
+              <button class="control-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg></button>
+            </div>
+
+            
+            <div class="controls-center">
+              <span class="movie-title-player">ธัญยฉัตร</span>
+            </div>
+
+            <div class="controls-right">
+              
+              <button class="control-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10z"></path></svg></button>
+              
+              <button id="fullscreenBtn" class="control-btn">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path></svg>
+              </button>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="modal-overlay" id="moreInfoModal">
+      <div class="modal-container">
+        
+        
+        <button class="modal-close-btn" id="closeModalBtn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+
+        
+        <div class="modal-hero">
+          
+          <div class="modal-static-bg" id="modalStaticBg" style="background-image: url('vid/previewdaisy.png');"></div>
+          
+          
+          <video muted playsinline id="modalVideo" class="modal-video">
+            <source src="vid/highlightdaisy.mp4" type="video/mp4">
+          </video>
+          
+          
+          <div class="modal-vignette"></div>
+
+          
+          <div class="modal-hero-content">
+            <div class="modal-logo-area">
+              <div class="modal-netflix-text">DAISY</div>
+              <h2 class="modal-title-text">       </h2>
+              <div class="modal-sub-text">Thanyachat</div>
+            </div>
+
+            <div class="modal-controls">
+              <div class="modal-controls-left">
+                
+                <button class="btn play-btn" id="modalPlayBtn">
+                  <svg viewBox="0 0 24 24" fill="currentColor" class="btn-icon"><path d="M8 5v14l11-7z"/></svg> เล่น
+                </button>
+                <button class="icon-circle-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></button>
+                <button class="icon-circle-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"></path></svg></button>
+              </div>
+              <button class="icon-circle-btn volume-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><line x1="23" y1="9" x2="17" y2="15"></line><line x1="17" y1="9" x2="23" y2="15"></line></svg></button>
+            </div>
+          </div>
+        </div>
+
+        
+        <div class="modal-details">
+          
+          
+          <div class="modal-columns">
+            <div class="modal-col-left">
+              <div class="modal-meta">
+                <span class="match-score">2026</span>
+                <span>1 ตอน</span>
+                <span class="badge-box">HD</span>
+                <span class="badge-box">❤︎⁠</span>
+              </div>
+              <div class="modal-age-row">
+                <span class="age-box">1เดือน</span>
+                <span>ความรัก</span>
+              </div>
+              <div class="modal-top10">
+                <span class="top10-badge">TOP 10</span>
+                <span class="top10-text">ภาพยนตร์อันดับ 1 วันนี้</span>
+              </div>
+              <p class="modal-synopsis">
+                หนึ่งเดือนอาจเป็นเวลาไม่นานสำหรับใครหลายคน แต่สำหรับเค้า มันเต็มไปด้วยรอยยิ้ม ความสุข และช่วงเวลาที่มีเธออยู่เคียงข้าง<br>อยากบอกให้เธอรู้ว่าเค้ารักเธอมากแค่ไหน เธออย่าคิดว่าความรักของเค้าจะหมดไปภายในเดือนสองเดือนหรือปีสองปี เพราะความรักของเค้าไม่ใช่แค่รักชั่วคราว หรือรักเอาสนุก แต่จะเป็นความรักที่ยั่งยืนและไม่มีวันหมดลง
+              </p>
+            </div>
+            
+            <div class="modal-col-right">
+              <div class="info-line"><span class="info-label">นักแสดง:</span> นายนาถวัฒน์ ชมชูชื่น, <br>นางสาวธัญยฉัตร สุพรรณวัจน์</div>
+              <div class="info-line"><span class="info-label">แนว:</span> ไทย, ภาพยนตร์ความรัก</div>
+              <div class="info-line"><span class="info-label">ภาพยนตร์เรื่องนี้:</span> โรแมนติก</div>
+            </div>
+          </div>
+
+          
+          <div class="modal-about">
+            <h3 class="about-title">เกี่ยวกับ ธัญยฉัตร</h3>
+            <div class="info-line"><span class="info-label">ผู้สร้าง:</span> แม่เก้า</div>
+            <div class="info-line"><span class="info-label">นักแสดง:</span> นายนาถวัฒน์ ชมชูชื่น, <br>นางสาวธัญยฉัตร สุพรรณวัจน์</div>
+            <div class="info-line"><span class="info-label">แนว:</span> ไทย, ภาพยนตร์ความรัก</div>
+            <div class="info-line"><span class="info-label">ภาพยนตร์เรื่องนี้:</span> โรแมนติก</div>
+            <div class="info-line align-center mt-2"><span class="info-label">ระดับความเหมาะสม:</span> <span class="age-box">13+</span> ความรุนแรงด้านความหวาน แนะนำสำหรับผู้ชมอายุ 13 ปีขึ้นไป เหตุอาจหัวใจวายตายได้เพราะเห็นคนหวานกัน กริ้วๆ</div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        // ดึง Element ต่างๆ มาเตรียมไว้
+        const heroLogo = document.getElementById('heroLogo');
+        const heroStaticBg = document.getElementById('heroStaticBg');
+        const heroVideo = document.getElementById('heroVideo');
+        const heroDesc = document.getElementById('heroDesc');
+        
+        // Element สำหรับแอนิเมชันกด Play
+        const playBtn = document.querySelector('.play-btn');
+        const heroSection = document.querySelector('.hero-section');
+        const loadingScreen = document.getElementById('loadingScreen');
+        const fullScreenPlayer = document.getElementById('fullScreenPlayer');
+        const mainMovie = document.getElementById('mainMovie');
+        const backToHomeBtn = document.getElementById('backToHomeBtn');
+        const allUiElements = document.querySelectorAll('.netflix-navbar, .hero-content, .age-rating, .main-content');
+        const profileMenuTrigger = document.getElementById('profileMenuTrigger');
+        const profileMenu = document.getElementById('profileMenu');
+        const moveProfileBtn = document.getElementById('moveProfileBtn');
+        const navProfileAvatar = document.getElementById('navProfileAvatar');
+        const navProfileName = document.getElementById('navProfileName');
+
+        const profileMap = {
+          Earth: { image: 'img/earthpfp.jpg', name: 'Earth' },
+          Daisy: { image: 'img/daisypfp.jpg', name: 'Daisy' },
+          Katsu: { image: 'img/katsupfp.jpg', name: 'Katsu' }
+        };
+
+        const applyProfile = (profileKey) => {
+          const selectedProfile = profileMap[profileKey] || profileMap.Daisy;
+          localStorage.setItem('selectedProfile', profileKey || 'Daisy');
+          if (navProfileAvatar) {
+            navProfileAvatar.src = selectedProfile.image;
+            navProfileAvatar.alt = selectedProfile.name;
+          }
+          if (navProfileName) {
+            navProfileName.textContent = selectedProfile.name;
+          }
+        };
+
+        const closeProfileMenu = () => {
+          if (profileMenuTrigger) {
+            profileMenuTrigger.classList.remove('open');
+            profileMenuTrigger.setAttribute('aria-expanded', 'false');
+          }
+          if (profileMenu) {
+            profileMenu.classList.remove('show');
+          }
+        };
+
+        const openProfileMenu = () => {
+          if (profileMenuTrigger) {
+            profileMenuTrigger.classList.add('open');
+            profileMenuTrigger.setAttribute('aria-expanded', 'true');
+          }
+          if (profileMenu) {
+            profileMenu.classList.add('show');
+          }
+        };
+
+        applyProfile(localStorage.getItem('selectedProfile') || 'Daisy');
+
+        profileMenuTrigger?.addEventListener('click', (event) => {
+          if (event.target.closest('.profile-menu-item')) return;
+          event.stopPropagation();
+          if (profileMenuTrigger.classList.contains('open')) {
+            closeProfileMenu();
+          } else {
+            openProfileMenu();
+          }
+        });
+
+        profileMenuTrigger?.addEventListener('keydown', (event) => {
+          if (event.key === 'Enter' || event.key === ' ') {
+            event.preventDefault();
+            if (profileMenuTrigger.classList.contains('open')) {
+              closeProfileMenu();
+            } else {
+              openProfileMenu();
+            }
+          }
+        });
+
+        document.addEventListener('click', (event) => {
+          if (profileMenuTrigger && !profileMenuTrigger.contains(event.target)) {
+            closeProfileMenu();
+          }
+        });
+
+        document.addEventListener('keydown', (event) => {
+          if (event.key === 'Escape') {
+            closeProfileMenu();
+          }
+        });
+
+        moveProfileBtn?.addEventListener('click', () => {
+          closeProfileMenu();
+          window.location.href = 'index.html';
+        });
+        
+        // 1. ระบบภาพและวิดีโอ (เปลี่ยนใน 3 วินาที)
+        setTimeout(() => {
+          heroStaticBg.classList.add('fade-out'); // เฟดรูปภาพออก
+          heroVideo.classList.add('fade-in');     // โชว์วิดีโอ
+          
+          heroVideo.currentTime = 0; // บังคับให้วิดีโอเริ่มเล่นจากวินาทีที่ 0
+          heroVideo.play();          // สั่งให้วิดีโอเริ่มเล่น
+        }, 4000);
+
+        // 2. ระบบข้อความ (เปลี่ยนใน 10 วินาที)
+        setTimeout(() => {
+          heroLogo.classList.add('transform-state'); // ขยายโลโก้ชื่อเรื่อง
+          heroDesc.classList.add('hide');            // ซ่อนเรื่องย่อ
+        }, 10000);
+
+        // 3. เมื่อวิดีโอไฮไลต์เล่นจบ (คืนค่ากลับเป็นรูปภาพปก แล้วค้างไว้แบบนั้น)
+        heroVideo.addEventListener('ended', () => {
+          heroStaticBg.classList.remove('fade-out'); // ดึงรูปภาพปกกลับมา
+          heroVideo.classList.remove('fade-in');     // เฟดวิดีโอทิ้งไป
+        });
+
+        // 2. ให้ Navbar เปลี่ยนสีเวลากดเลื่อนจอลง
+        window.addEventListener('scroll', () => {
+          const nav = document.querySelector('.netflix-navbar');
+          if (window.scrollY > 0) {
+            nav.classList.add('scrolled');
+          } else {
+            nav.classList.remove('scrolled');
+          }
+        });
+
+        // =========================================
+        // ระบบปุ่ม "ข้อมูลเพิ่มเติม" (More Info Modal)
+        // =========================================
+        const infoBtn = document.querySelector('.info-btn'); // ปุ่มข้อมูลเพิ่มเติมตรงหน้าแรก
+        const moreInfoModal = document.getElementById('moreInfoModal');
+        const closeModalBtn = document.getElementById('closeModalBtn');
+        const modalVideo = document.getElementById('modalVideo');
+        const modalStaticBg = document.getElementById('modalStaticBg');
+        const modalPlayBtn = document.getElementById('modalPlayBtn');
+
+        // เปิด Modal
+        infoBtn.addEventListener('click', () => {
+          moreInfoModal.classList.add('open');
+          document.body.style.overflow = 'hidden'; // ล็อกพื้นหลังไม่ให้เลื่อน
+          
+          // ซ่อนภาพนิ่ง แล้วเล่นวิดีโอ
+          modalStaticBg.classList.remove('show');
+          modalVideo.currentTime = 0;
+          modalVideo.play().catch(() => {}); 
+        });
+
+        // ปิด Modal
+        const closeModal = () => {
+          moreInfoModal.classList.remove('open');
+          document.body.style.overflow = ''; // คืนค่าการเลื่อนพื้นหลัง
+          modalVideo.pause(); // หยุดวิดีโอ
+        };
+
+        closeModalBtn.addEventListener('click', closeModal);
+
+        // ปิด Modal เมื่อคลิกที่พื้นหลังสีดำๆ รอบๆ
+        moreInfoModal.addEventListener('click', (e) => {
+          if (e.target === moreInfoModal) closeModal();
+        });
+
+        // เมื่อวิดีโอใน Modal เล่นจบ -> เฟดแสดงรูปภาพนิ่งขึ้นมาทับ
+        modalVideo.addEventListener('ended', () => {
+          modalStaticBg.classList.add('show');
+        });
+
+        // หากผู้ใช้กดปุ่ม "เล่น" ในหน้าต่าง Modal 
+        modalPlayBtn.addEventListener('click', () => {
+          closeModal(); // ปิดหน้าต่าง Modal ก่อน
+          
+          // ตั้งหน่วงเวลาจิ๊ดนึงให้ Modal ปิดเสร็จ ค่อยเรียกฟังก์ชันปุ่ม Play หลัก (เพื่อเข้าสู่ Smart Zoom)
+          setTimeout(() => {
+            playBtn.click(); 
+          }, 300);
+        });
+        // =========================================
+
+        // 3. --- ระบบตอนกดปุ่ม "เล่น" ---
+        playBtn.addEventListener('click', () => {
+          // สเต็ป 1: ซ่อน UI ทั้งหมด (เมนู, ปุ่ม, แถวหนัง)
+          allUiElements.forEach(el => el.classList.add('fade-out-ui'));
+          
+          // สเต็ป 2: ซูมวิดีโอพื้นหลังเข้าไปแบบสมูทๆ
+          heroSection.classList.add('zoom-in-bg');
+          
+          // สเต็ป 3: ตัดเข้าหน้าโหลดดิ้งสีดำ (หลังผ่านไป 1 วินาที)
+          setTimeout(() => {
+            loadingScreen.classList.add('visible');
+          }, 1000);
+
+          // สเต็ป 4: โหลดเสร็จแล้ว เปิดหนังตัวเต็ม (หลังผ่านไป 3.5 วินาที)
+          setTimeout(() => {
+            loadingScreen.classList.remove('visible'); // ซ่อนหน้าโหลดดิ้ง
+            fullScreenPlayer.classList.add('visible'); // โชว์หน้าจอหนังตัวเต็ม
+            
+            heroVideo.pause(); // หยุดเล่นวิดีโอไฮไลต์พื้นหลัง
+            mainMovie.play();  // เริ่มเล่นหนังตัวเต็ม
+            
+            // ทำให้สามารถเล่นวิดีโอแบบเต็มจอ (Fullscreen) ได้โดยอัตโนมัติ (บางเบราว์เซอร์อาจต้องกดยืนยัน)
+            if (mainMovie.requestFullscreen) {
+              // mainMovie.requestFullscreen(); // เปิดใช้ถ้าอยากให้เด้ง Fullscreen มือถืออัตโนมัติ
+            }
+          }, 3500);
+        });
+
+        // --- CUSTOM VIDEO PLAYER LOGIC ---
+        const playPauseBtn = document.getElementById('playPauseBtn');
+        const playIcon = document.getElementById('playIcon');
+        const pauseIcon = document.getElementById('pauseIcon');
+        const fullscreenBtn = document.getElementById('fullscreenBtn');
+        const progressContainer = document.getElementById('progressContainer');
+        const progressBar = document.getElementById('progressBar');
+        const progressDot = document.getElementById('progressDot');
+        
+        // Toggle Play/Pause
+        playPauseBtn.addEventListener('click', () => {
+          if (mainMovie.paused) {
+            mainMovie.play();
+            playIcon.style.display = 'none';
+            pauseIcon.style.display = 'block';
+          } else {
+            mainMovie.pause();
+            playIcon.style.display = 'block';
+            pauseIcon.style.display = 'none';
+          }
+        });
+
+        // Update Progress Bar as video plays
+        mainMovie.addEventListener('timeupdate', () => {
+          const progressPercent = (mainMovie.currentTime / mainMovie.duration) * 100;
+          progressBar.style.width = `${progressPercent}%`;
+          progressDot.style.left = `${progressPercent}%`;
+        });
+
+        // Click on Progress Bar to skip ahead/back
+        progressContainer.addEventListener('click', (e) => {
+          const rect = progressContainer.getBoundingClientRect();
+          const clickX = e.clientX - rect.left;
+          const width = rect.width;
+          const clickPercent = clickX / width;
+          mainMovie.currentTime = clickPercent * mainMovie.duration;
+        });
+
+        // Fullscreen Toggle
+        fullscreenBtn.addEventListener('click', () => {
+          if (!document.fullscreenElement) {
+            fullScreenPlayer.requestFullscreen().catch(err => console.log(err));
+          } else {
+            document.exitFullscreen();
+          }
+        });
+
+        // Make sure the back button pauses the movie and resets the play icon
+        backToHomeBtn.addEventListener('click', () => {
+          mainMovie.pause(); 
+          mainMovie.currentTime = 0; 
+          playIcon.style.display = 'block'; // Reset icon
+          pauseIcon.style.display = 'none'; // Reset icon
+          
+          if (document.fullscreenElement) document.exitFullscreen(); // Exit fullscreen if active
+
+          fullScreenPlayer.classList.remove('visible'); 
+          heroSection.classList.remove('zoom-in-bg'); 
+          allUiElements.forEach(el => el.classList.remove('fade-out-ui')); 
+          
+          heroVideo.play(); 
+        });
+
+      });
+    </script>
+  </body>
+</html>

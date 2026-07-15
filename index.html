@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="th">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Daisy</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="top-gradient"></div>
+    <div class="page">
+      <div class="intro" id="intro">
+        <div class="logo"></div>
+      </div>
+
+      <main class="who" id="who" aria-hidden="true">
+        <h1 class="title">เลือกผู้ชม</h1>
+        <div class="profiles" role="list">
+          <button class="profile" data-profile="Earth" data-name="Earth" aria-label="Earth profile">
+            <div class="avatar avatar-earth" aria-hidden="true">
+              <img src="img/earthpfp.jpg" alt="Earth">
+            </div>
+            <div class="name">Earth</div>
+          </button>
+
+          <button class="profile" data-profile="Daisy" data-name="Daisy" aria-label="Daisy profile">
+            <div class="avatar avatar-daisy" aria-hidden="true">
+              <img src="img/daisypfp.jpg" alt="Daisy">
+            </div>
+            <div class="name">Daisy</div>
+          </button>
+
+          <button class="profile" data-profile="Katsu" data-name="Katsu" aria-label="Katsu profile">
+            <div class="avatar avatar-katsu" aria-hidden="true">
+              <img src="img/katsupfp.jpg" alt="Katsu">
+            </div>
+            <div class="name">Katsu</div>
+          </button>
+
+          <div class="profile add">
+            <div class="avatar avatar-add-box">
+              <div class="add-circle">+</div>
+            </div>
+            <div class="name">เพิ่มโปรไฟล์</div>
+          </div>
+        </div>
+        <div class="manage">จัดการโปรไฟล์</div>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
