@@ -142,7 +142,7 @@
     
     <div id="fullScreenPlayer" class="fullscreen-player">
       
-      <video id="mainMovie">
+      <video id="mainMovie" playsinline>
         <source src="vid/fulldaisy.mp4" type="video/mp4">
       </video>
 
@@ -472,6 +472,13 @@
 
         // 3. --- ระบบตอนกดปุ่ม "เล่น" ---
         playBtn.addEventListener('click', () => {
+          
+          // ==========================================
+          mainMovie.play().then(() => {
+            mainMovie.pause();
+          }).catch(() => {});
+          // ==========================================
+
           // สเต็ป 1: ซ่อน UI ทั้งหมด (เมนู, ปุ่ม, แถวหนัง)
           allUiElements.forEach(el => el.classList.add('fade-out-ui'));
           
@@ -489,12 +496,8 @@
             fullScreenPlayer.classList.add('visible'); // โชว์หน้าจอหนังตัวเต็ม
             
             heroVideo.pause(); // หยุดเล่นวิดีโอไฮไลต์พื้นหลัง
-            mainMovie.play();  // เริ่มเล่นหนังตัวเต็ม
+            mainMovie.play();  // คราวนี้ iPad จะยอมให้เล่นแล้ว!
             
-            // ทำให้สามารถเล่นวิดีโอแบบเต็มจอ (Fullscreen) ได้โดยอัตโนมัติ (บางเบราว์เซอร์อาจต้องกดยืนยัน)
-            if (mainMovie.requestFullscreen) {
-              // mainMovie.requestFullscreen(); // เปิดใช้ถ้าอยากให้เด้ง Fullscreen มือถืออัตโนมัติ
-            }
           }, 3500);
         });
 
