@@ -473,11 +473,10 @@
         // 3. --- ระบบตอนกดปุ่ม "เล่น" ---
         playBtn.addEventListener('click', () => {
           
-          // ==========================================
-          mainMovie.play().then(() => {
-            mainMovie.pause();
-          }).catch(() => {});
-          // ==========================================
+          // [ทริคพิเศษสำหรับ iPad] 
+          // สั่งเล่นทันทีที่แตะปุ่มเพื่อขอสิทธิ์ Apple แต่ทำการ "ปิดเสียง" ไว้ก่อน
+          mainMovie.muted = true;
+          mainMovie.play().catch(err => console.log('Autoplay prevented:', err));
 
           // สเต็ป 1: ซ่อน UI ทั้งหมด (เมนู, ปุ่ม, แถวหนัง)
           allUiElements.forEach(el => el.classList.add('fade-out-ui'));
@@ -495,8 +494,10 @@
             loadingScreen.classList.remove('visible'); // ซ่อนหน้าโหลดดิ้ง
             fullScreenPlayer.classList.add('visible'); // โชว์หน้าจอหนังตัวเต็ม
             
-            heroVideo.pause(); // หยุดเล่นวิดีโอไฮไลต์พื้นหลัง
-            mainMovie.play();  // คราวนี้ iPad จะยอมให้เล่นแล้ว!
+            heroVideo.pause();
+            
+            mainMovie.currentTime = 0;
+            mainMovie.muted = false; 
             
           }, 3500);
         });
