@@ -556,7 +556,7 @@ body.main-page-body {
 .main-content {
   position: relative;
   z-index: 10;
-  margin-top: -4vw; 
+  margin-top: -8vw; 
   padding-bottom: 50px;
 }
 
