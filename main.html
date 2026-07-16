@@ -473,31 +473,45 @@
         // 3. --- ระบบตอนกดปุ่ม "เล่น" ---
         playBtn.addEventListener('click', () => {
           
-          // [ทริคพิเศษสำหรับ iPad] 
-          // สั่งเล่นทันทีที่แตะปุ่มเพื่อขอสิทธิ์ Apple แต่ทำการ "ปิดเสียง" ไว้ก่อน
-          mainMovie.muted = true;
-          mainMovie.play().catch(err => console.log('Autoplay prevented:', err));
+          // 1. สั่งโหลดไฟล์มารอไว้ทันทีที่นิ้วแตะ
+          mainMovie.load();
+          
+          // ตัวแปรเช็กว่า "แอนิเมชัน 3.5 วินาที จบหรือยัง?"
+          let animationFinished = false;
 
-          // สเต็ป 1: ซ่อน UI ทั้งหมด (เมนู, ปุ่ม, แถวหนัง)
+          // 2. สั่งเล่นทันทีเพื่อขอสิทธิ์จาก Apple
+          const playPromise = mainMovie.play();
+          if (playPromise !== undefined) {
+            playPromise.then(() => {
+              // ถ้าวิดีโอโหลดเสร็จ "ก่อน" แอนิเมชันจะจบ ค่อยสั่งหยุดพักไว้ก่อน
+              // แต่ถ้าโหลดเสร็จ "หลัง" แอนิเมชันจบแล้ว ก็ปล่อยให้มันเล่นต่อไปเลย!
+              if (!animationFinished) {
+                mainMovie.pause(); 
+              }
+            }).catch(err => console.log('iOS Blocked Play:', err));
+          }
+
+          // สเต็ป 1: ซ่อน UI
           allUiElements.forEach(el => el.classList.add('fade-out-ui'));
           
-          // สเต็ป 2: ซูมวิดีโอพื้นหลังเข้าไปแบบสมูทๆ
+          // สเต็ป 2: ซูม
           heroSection.classList.add('zoom-in-bg');
           
-          // สเต็ป 3: ตัดเข้าหน้าโหลดดิ้งสีดำ (หลังผ่านไป 1 วินาที)
+          // สเต็ป 3: โหลดดิ้ง
           setTimeout(() => {
             loadingScreen.classList.add('visible');
           }, 1000);
 
-          // สเต็ป 4: โหลดเสร็จแล้ว เปิดหนังตัวเต็ม (หลังผ่านไป 3.5 วินาที)
+          // สเต็ป 4: โชว์หนังตัวเต็ม
           setTimeout(() => {
-            loadingScreen.classList.remove('visible'); // ซ่อนหน้าโหลดดิ้ง
-            fullScreenPlayer.classList.add('visible'); // โชว์หน้าจอหนังตัวเต็ม
+            animationFinished = true; // บอกระบบว่าแอนิเมชันจบแล้วนะ อนุญาตให้เล่นได้เต็มที่!
             
-            heroVideo.pause();
+            loadingScreen.classList.remove('visible'); 
+            fullScreenPlayer.classList.add('visible'); 
             
-            mainMovie.currentTime = 0;
-            mainMovie.muted = false; 
+            heroVideo.pause(); // หยุดวิดีโอพื้นหลัง
+            
+            mainMovie.play().catch(err => console.log('Final Play Error:', err)); 
             
           }, 3500);
         });
